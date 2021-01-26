@@ -67,7 +67,8 @@ remplacer `youtube-channel-id` par votre id de chaine youtube et `youtube-api-ke
 ```html
 <div class="youtube-embed-video">
   
-</div>```
+</div>
+```
 Ici vous pouvez rajouter votre embed de video
 
 ## Etape 3 (Github)
