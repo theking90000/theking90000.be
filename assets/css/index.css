@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
+body{
+    padding: 0px;
+    margin: 0px;
+}
+#main{
+    text-overflow: hidden;
+    min-height: 100vh;
+    min-width: 100vh;
+    background-color: #131313;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: 'Roboto',sans-serif;
+}
+.content{
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+}
+.title{
+   font-size: 3em;
+}
+.boxes__row{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+}
+.boxes__lines{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80%;
+    margin-top: 1.2em;
+    margin-bottom: 1.2;
+}
+.boxes{
+    width: 25%;
+    background-color: #181b1c;
+    margin: 1.5em;
+    width: 30%;
+    height: 80%;
+    padding: 1em;
+}
+.boxes h3{
+    font-size: 2.1em;
+}
+.boxes .meta{
+    font-size: 0.55em;
+    text-decoration: none;
+    color : rgb(255, 255, 255,0.6);
+}
+.boxes__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxes .discord__servers{
+    background-color: #000;
+    font-size: 1.3em;
+}
+button{
+    border: none;
+    border-radius: 3px;
+    padding: 10px 30px;
+    line-height: 1;
+    min-height: 32px;
+    display: flex;
+    justify-content: space-between;
+    color :#fff;
+    align-items: center;
+    min-width: 45%;
+    cursor: pointer;
+}
+button:hover{
+    cursor: pointer;
+}
+#main .up{
+    height: 100%;
+    position: fixed;
+    top: -150%;
+    z-index: 9999;
+    animation: upwindow 3s;
+}
+#main .reverse__up{
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    animation: upwindow__rev 3s;
+}
+.content__discord__servers{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+}
+.back{
+    position: fixed;
+}
+.back img{
+    position: relative;
+    top: 15px;
+    right: -15px;
+    cursor: pointer;
+}
+.content__discord__servers .list__servers__content{
+    display: flex;
+    list-style: none;
+    min-height: 0;
+    overflow: auto;
+    background-color: #181b1c;
+    align-items: center;
+    flex-direction: column;
+}
+.flexGrowWrapper {
+    display: flex;
+    border: 2px solid red;
+    flex-grow: 1;
+    min-height: 0;
+    flex: 1 1 0;
+}
+.box__list{
+    height: 80%;
+    width: 30%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background:#181b1c ;
+    scrollbar-color: #000 #181b1c;
+    scrollbar-width: thin;  
+    scrollbar-width: 1em;
+
+}
+.content__discord__servers .list__servers__content .li{
+    list-style: none;
+    width: 90%;
+    height: 85px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    margin:5px;
+    background-color: #24252a;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content__discord__servers .list__servers__content .presentation{
+    display: flex;
+    flex-direction: row;
+    
+}
+.content__discord__servers .list__servers__content .li img{
+    margin-left: 1em;
+    display: block;
+    border-radius: 20px;
+    width: 48px;
+    height: 48px;
+    float: left;
+    align-self: center;
+}
+.content__discord__servers .list__servers__content .li h3{
+    padding-left: 1em;
+    align-self: flex-start;
+}
+.list__servers__flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+li{
+    list-style:none;
+}
+
+.unpop{
+    z-index: 9999;
+    bottom : -150%;
+}
+.pop{
+    z-index: 1;
+    bottom : 0px;
+    animation: openpopup 3s;
+}
+.reverse__unpop{
+    z-index: 9999;
+    bottom : -150%;
+    animation: openpopup__rev 3s;
+}
+.none{
+    display: none;
+}
+
+.button_join_discord{
+    margin-right: 1em;
+    background-color: #000;
+}
+
+a,a:hover,a:visited,a:active{
+    text-decoration: none;
+    color : white;
+}
+
+
+.youtube__button{
+    background-color: rgb(115, 115, 115,0.8);
+    font-size: 2em;
+    padding: 4px 32px;
+    justify-content: space-around;
+}
+
+.youtube__button img{
+    height: 50px;
+    width: 50px;
+}
+
+.content__youtube{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+}
+
+.page__youtube{
+    margin: auto;
+    margin-top: 2em;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.page__youtube .user__profil{
+    background-color: #181b1c;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+.page__youtube .user__profil .img__user{
+   margin-left: 1em;
+}
+.page__youtube .user__profil .img__user img{
+    border-radius: 45px;
+}
+.page__youtube .usermeta{
+    margin-left: 15px;
+    align-self: center;
+}
+.usermeta .name__user{
+    font-size: 2em;
+}
+.usermeta .suscribers{
+    color : rgb(255, 255, 255,0.6);
+}
+.page__youtube .subscribe{
+    align-self: center;
+    margin-left: auto;
+}
+.button_subscribe{
+    margin-right: 1em;
+    background-color: #cc0000;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+.youtube-embed-video{
+    margin-top: 1em;
+    padding-top: 2em;
+    background-color: #181b1c;
+    height: 70%;
+    width: 100%;
+}
+
+.github__button{
+    background-color: #fff;
+    color : #000;
+    font-size: 2em;
+    padding: 4px 32px;
+    justify-content: space-around;
+}
+
+.github__button img{
+    height: 50px;
+    width: 50px;
+}
+
+.content__github{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+}
+
+.page__github {
+    margin: auto;
+    margin-top: 2em;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    overflow: hidden;
+}
+.github__profil .img__profil img{
+    height: 280px;
+    width: 280px;
+    border-radius: 150px;
+}
+.github__profil .name__profil{
+    text-align: left;
+    margin-left: 2.5em;
+    margin-top: 1.5em;
+}
+
+.github_repo{
+    margin-left: auto;
+    
+    width: 80%;
+    flex-wrap: wrap;
+}
+.repo{
+    flex:0 40%;
+    margin: 2em;
+    border-color: #30363d;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    height: 10%;
+    width: 45%;
+    padding : 10px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.8em;
+}
+.repo .repo__name{
+    text-align: left;
+}
+
+.content__github a,.content__github a:visited{
+    color:#57a5fe ;
+}
+.content__github a:hover{
+    color:#57a5fe ;
+    text-decoration: underline !important;
+}
+
+.twitter__button{
+    background-color: #1da1f3;
+    color : #fff;
+    font-size: 2em;
+    padding: 4px 32px;
+    justify-content: space-around; 
+}
+
+.twitter__button img{
+    height: 50px;
+    width: 50px;
+}
+
+.content__twitter{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+}
+
+
+.twitter_subs::after{
+    content: " abonnés";
+}
+
+.twitter_page{
+    margin: auto;
+    margin-top: 2em;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    overflow: hidden;
+}
+
+.twitter__image img{
+    border-radius: 100px;
+}
+.twitter__profile {
+    display: flex;
+    flex-direction: column;
+}
+.twiter_name div {
+
+    font-size: 1.5em;
+
+}
+
+@keyframes upwindow{
+    from {top: 0px;}
+    to {top: -150%;}
+}
+@keyframes upwindow__rev{
+    from {top: -150%;}
+    to {top: 0px;}
+}
+@keyframes openpopup{
+    from {bottom: -150%;}
+    to {bottom: 0px}
+}
+@keyframes openpopup__rev{
+    from {bottom: 0px;position: fixed;}
+    to {bottom: -150%;position: fixed;}
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .title{
+        font-size: 1.5em;
+     }
+  }
+  @media only screen and (max-width: 1000px) {
+    .title{
+        font-size: 1em;
+     }
+}
